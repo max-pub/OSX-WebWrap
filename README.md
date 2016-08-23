@@ -14,3 +14,11 @@ You can also call this command directly if you so prefer:
 ```javascript
 window.macOS.moveBy(10,10);
 ```
+
+Everything interesting happens here:
+[AppDelegate](https://github.com/max-pub/WebWrap/blob/master/WebWrap/AppDelegate.swift)
+
+Download the Demo to see for yourself:
+[DEMO](https://github.com/max-pub/WebWrap/releases/download/1.0/WebWrap.app.zip)
+
+you can replace the web-contents in the DEMO.app to have your own web-app run instantly
