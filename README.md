@@ -3,7 +3,8 @@
 Easily wrap your WebApp into a frameless macOS Application.
 
 To hide the app call "window.macOS.hide()" from JavaScript.
-```
+For example:
+```html
 <button onclick="window.macOS.hide()">CLOSE</button>
 ```
 
