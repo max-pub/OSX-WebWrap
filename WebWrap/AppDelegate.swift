@@ -13,7 +13,8 @@ import WebKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var web: WebView!
+    @IBOutlet weak var web: WKWebView!
+    
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // hide title
@@ -25,15 +26,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.window!.standardWindowButton(NSWindowButton.CloseButton)!.hidden = true
         self.window!.standardWindowButton(NSWindowButton.MiniaturizeButton)!.hidden = true
         self.window!.standardWindowButton(NSWindowButton.ZoomButton)!.hidden = true
+    
+//        self.web.preferences.setLocalStorageEnabled = true
+//        self.web.preferencesIdentifier = "storageEnabled"
+//        self.web.preferences.autosaves = true
+//        var prefs = self.web.preferences
+//        prefs._setLocalStorageDatabasePath = "~/Library/YourProjectName/LocalStorage"
+//        self.web.preferences._setLocalStorageDatabasePath = "~/Library/Application Support/myApp"
         
         // load html
         let home = NSBundle.mainBundle().resourcePath!;
         let url = NSURL(fileURLWithPath: home+"/web/index.html")
         let request = NSURLRequest(URL: url)
-        self.web.mainFrame.loadRequest(request)
+        self.web.loadRequest(request)
+//        self.web.loadFileURL(url, allowingReadAccessToURL: url)
+//        self.web.mainFrame.loadRequest(request)
         
         // connect javascript-bridge
-        self.web.windowScriptObject.setValue(JsHost(), forKey: "macOS")
+//        self.web.windowScriptObject.setValue(JsHost(), forKey: "macOS")
+        
+//        self.window.delegate = self
     }
 
     

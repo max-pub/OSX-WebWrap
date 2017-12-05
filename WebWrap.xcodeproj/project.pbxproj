@@ -275,6 +275,7 @@
 				50B414A71CB042790053CB1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
